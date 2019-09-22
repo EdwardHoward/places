@@ -11,7 +11,7 @@ COPY . /myapp
 COPY entrypoint.sh /usr/bin/
 RUN dos2unix /usr/bin/entrypoint.sh && apt-get --purge remove -y dos2unix
 RUN chmod +x /usr/bin/entrypoint.sh
-# ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
 # Start the main process.
